@@ -1,0 +1,52 @@
+    body{
+        background-color: rgb(151, 150, 150);
+    }
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+        grid-template-areas: 
+                        "h  h  h"
+                        "n  n  n"
+                       "a   a  as"
+                       "f   f  f";
+    }
+    header,nav,article,footer,aside{
+        border: 1px solid rgb(0, 0, 0);
+        padding: 10px;
+    }
+    header{
+        grid-area: h;
+    }
+    nav{
+        grid-area: n;
+        background-color: rgb(164, 191, 216);
+    }
+    article{
+        grid-area: a;
+    }
+    article div img{
+        width: 100%;
+    }
+    aside{
+        grid-area: as;
+        background-color: rgb(194, 161, 204);
+    }
+    footer{
+        grid-area: f;
+    }
+    /*ha mobilon nézzük*/
+@media screen and (max-width:600px) {
+    /*menu keruljon a fejlec ala*/
+    main{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        grid-template-areas: 
+                    "h"
+                    "n"
+                    "as"
+                    "a"
+                    "f";
+    }
+}
