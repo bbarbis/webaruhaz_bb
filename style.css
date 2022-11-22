@@ -1,5 +1,5 @@
     body{
-        background-color: rgb(151, 150, 150);
+        background-color: rgb(255, 255, 255);
     }
     main{
         display: grid;
@@ -18,25 +18,83 @@
     header{
         grid-area: h;
     }
+    h1{
+        color: black;
+        font-family: serif;
+    }
+    
     nav{
         grid-area: n;
-        background-color: rgb(164, 191, 216);
+        background-color: rgb(216, 232, 247);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 60px;
+      }
+      
+      li a {
+        display: block;
+        text-decoration: none;
+        font-family: serif;
+        color: black;
+      }
+    h3{
+        color: black;
+        font-family: sans-serif;
     }
     article{
         grid-area: a;
+        background-color: gainsboro;
     }
     article div img{
         width: 100%;
+        display: grid;
+        gap: 10px;
+        }
+    .kep{
+        width: 50%;
+        height: 40%;
+        border: 2px solid black;
+        
+
     }
+    .termek{
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+        gap: 10px;
+        
+    }
+   .right{
+    float: right;
+   }
     aside{
         grid-area: as;
-        background-color: rgb(194, 161, 204);
+        background-color: rgb(241, 243, 230);
     }
     footer{
         grid-area: f;
+        font-family: sans-serif;
+        text-align: center;
     }
+    @media screen and (max-width:700px) {
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            grid-template-areas: 
+                            "h  h  h"
+                            "n  n  n"
+                           "a   a  as"
+                           "f   f  f";
+        }
+    }
+
     /*ha mobilon nézzük*/
-@media screen and (max-width:600px) {
+    @media screen and (max-width:400px) {
     /*menu keruljon a fejlec ala*/
     main{
         display: grid;
@@ -49,4 +107,5 @@
                     "a"
                     "f";
     }
+
 }
